@@ -4,7 +4,7 @@ verif_connexion();
 include "../../fonctions.php";
 
 $contact = $bdd ->query("SELECT * FROM Contact WHERE id_contact = 1") -> fetch();
-
+#var_dump($contact);
 ?>
 
 <!doctype html>
@@ -17,7 +17,7 @@ $contact = $bdd ->query("SELECT * FROM Contact WHERE id_contact = 1") -> fetch()
 <body class="bgBeige">
 
   <div class="paddinglr10 tright padtop2">
-    <a href="deconnexion.php" class="fontDarkgrey">Déconnexion</a>
+    <a href="../deconnexion.php" class="fontDarkgrey">Déconnexion</a>
   </div>
 
   <div class="bgWhite marg10">
@@ -35,22 +35,22 @@ $contact = $bdd ->query("SELECT * FROM Contact WHERE id_contact = 1") -> fetch()
       <div class="flex column aicenter">
         <div class="flex aicenter padbot3">
           <label for="tel" class="tcenter">Téléphone : </label>
-          <input class="tcenter" type="text" name="tel" value='<?php echo $contact["tel"]?>'/>
+          <input class="tcenter padFull1" type="text" name="tel" value='<?php echo $contact["tel"]?>'/>
         </div>
 
         <div class="flex aicenter padbot3">
           <label for="mail" class="tcenter">Email : </label>
-          <input class="tcenter" type="email" name="mail" value='<?php echo $contact["email"]?>'/>
+          <input class="tcenter padFull1" type="email" name="email" value='<?php echo $contact["email"]?>'/>
         </div>
 
         <div class="flex aicenter padbot3">
           <label for="linkedin" class="tcenter">LinkedIn : </label>
-          <input class="tcenter" type="text" name="linkedin" value='<?php echo $contact["linkedin"]?>'/>
+          <input class="tcenter padFull1" type="text" name="linkedin" value='<?php echo $contact["linkedin"]?>'/>
         </div>
 
         <div class="flex aicenter padbot3">
           <label for="github" class="tcenter">GitHub : </label>
-          <input class="tcenter" type="text" name="github" value='<?php echo $contact["github"]?>'/>
+          <input class="tcenter padFull1" type="text" name="github" value='<?php echo $contact["github"]?>'/>
         </div>
 
 

@@ -25,7 +25,7 @@ if(!empty($_POST)) {
           $query = $bdd -> prepare ("INSERT INTO projet_techno (projet_id, techno_id) VALUES (:projet_id, :techno_id)");
           $query -> execute([
               "projet_id" => $projetID,
-              "techno_id" => $technoID["id_techno"],
+              "techno_id" => $technoID,
           ]);
         }
 
@@ -64,7 +64,7 @@ if(!empty($_POST)) {
           $query = $bdd -> prepare ("INSERT INTO projet_techno (projet_id, techno_id) VALUES (:projet_id, :techno_id)");
           $query -> execute([
               "projet_id" => $projetID,
-              "techno_id" => $technoID["id_techno"],
+              "techno_id" => $technoID,
           ]);
         }
 
@@ -72,9 +72,27 @@ if(!empty($_POST)) {
     }
 }
 
-#if(!empty($_FILES)) {
-    #enregistrerFichier($_FILES["imageprojet"],  "image/$projetID.jpg");
-#}
+if(!empty($_FILES["imageprojet"]["name"][0]) && $_FILES["imageprojet"]["error"][0] == 0 ) {
+
+    $nom_dossier_destination = "../../templates/images";
+
+    // Je fabrique le chemin de destination de mon nouveau fichier
+    $chemin_dossier_destination = __DIR__ .  "/" . $nom_dossier_destination;
+    $chemin_fichier_destination = $chemin_dossier_destination . "/" . $_POST["nom"] . "1.jpg";
+
+    move_uploaded_file($_FILES["imageprojet"]["tmp_name"][0], $chemin_fichier_destination);
+}
+
+if(!empty($_FILES["imageprojet"]["name"][1]) && $_FILES["imageprojet"]["error"][1] == 0 ) {
+
+    $nom_dossier_destination = "../../templates/images";
+
+    // Je fabrique le chemin de destination de mon nouveau fichier
+    $chemin_dossier_destination = __DIR__ .  "/" . $nom_dossier_destination;
+    $chemin_fichier_destination = $chemin_dossier_destination . "/" . $_POST["nom"] . "2.jpg";
+
+    move_uploaded_file($_FILES["imageprojet"]["tmp_name"][1], $chemin_fichier_destination);
+}
 
 header("location:" . URL_BASE . "admin/administration.php");
 exit;

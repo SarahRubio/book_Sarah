@@ -23,7 +23,7 @@
 
   <body class="bgBeige">
     <div class="paddinglr10 tright padtop2">
-      <a href="deconnexion.php" class="fontDarkgrey">Déconnexion</a>
+      <a href="../deconnexion.php" class="fontDarkgrey">Déconnexion</a>
     </div>
     <div class="bgWhite marg10">
       <main class="padtopbot10">
@@ -147,12 +147,16 @@
               </div>
 
               <div class="">
-                Image du projet : <input name="imageprojet" type="file"  accept="image/jpeg"  class="padbot3"/>
+                Image 1 du projet : <input name="imageprojet[]" type="file" accept="image/jpeg"  class="padbot3"/>
+              </div>
+
+              <div class="">
+                Image 2 du projet : <input name="imageprojet[]" type="file" accept="image/jpeg"  class="padbot3"/>
               </div>
 
               <input type="submit" value="Envoyer" />
 
-              <a href="administration.php" class="button">Annuler</a>
+              <a href="../administration.php" class="button">Annuler</a>
 
           </form>
 

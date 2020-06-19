@@ -35,6 +35,7 @@
       ?>
 
       <div class="flex column aicenter jaround padtop10">
+          <a href="<?php echo URL_BASE ?>admin/user_admin/user_lister.php" class="padbot3 fontDarkgrey pointer">Gérer les administrateurs</a>
           <a href="<?php echo URL_BASE ?>admin/accueil_admin/formulaire_accueil.php" class="padbot3 fontDarkgrey pointer">Modifier ma page d'accueil</a>
           <a href="<?php echo URL_BASE ?>admin/projets_admin/projets_lister.php" class="padbot3 fontDarkgrey pointer">Ajouter, modifier ou supprimer un projet</a>
           <a href="<?php echo URL_BASE ?>admin/techno_admin/techno_lister.php" class="padbot3 fontDarkgrey pointer">Ajouter, modifier ou supprimer une technologie</a>

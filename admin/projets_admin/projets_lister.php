@@ -12,7 +12,7 @@ verif_connexion();
 
 <body class="bgBeige">
   <div class="paddinglr10 tright padtop2">
-    <a href="deconnexion.php" class="fontDarkgrey">Déconnexion</a>
+    <a href="../deconnexion.php" class="fontDarkgrey">Déconnexion</a>
   </div>
   <div class="bgWhite marg10">
     <main class="padtopbot10">
@@ -40,7 +40,7 @@ verif_connexion();
                 echo "<ul>";
                 foreach($results as $result) {
                     $lienModifier = "<a href=" . URL_BASE . "admin/projets_admin/formulaire_projets.php?projetAAfficher=$result[id_projet] class='fontDarkgrey'>Modifier</a>";
-                    $lienSupprimer = "<a href=" . URL_BASE . "admin/projets_admin/projets_supprimer.php.php?projetASupprimer=$result[id_projet] class='fontDarkgrey'>Supprimer</a>";
+                    $lienSupprimer = "<a href=" . URL_BASE . "admin/projets_admin/projets_supprimer.php?projetASupprimer=$result[id_projet] class='fontDarkgrey'>Supprimer</a>";
                     echo "<li class='padbot3'>✒︎ $result[nom]  ( $lienModifier | $lienSupprimer)</li>";
                 }
                 echo "</ul>";

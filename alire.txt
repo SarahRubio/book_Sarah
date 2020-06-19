@@ -1,0 +1,15 @@
+Voici un site web administrable créé avec PHP dans lequel l'on peut gérer l’ensemble des données du site : image et texte.
+
+Pour le faire fonctionner il faut créer une BDD "monbook_Sarah" et y importer les données qui sont dans le dossier
+sql/monbook_Sarah.sql
+
+Ensuite, il faut modifier au besoin le fichier "config.php" :
+  - La constante URL_BASE (localhost:8888 sous mac), (localhost:) sous Windows et redéfinir le chemin selon le dossier dans lequel a été inséré le dossier book_Sarah.
+  - La variable $nomBaseDeDonnees si vous avez changé le nom de la base de données dans PHPmyAdmin
+  - La variable $motdepasse si vous êtes sous Windows = '' à la place de 'root';
+
+
+Pour accéder à l'espace administrateur il faudra aller vers l'url suivante et entrer l'identifiant et le mot de passe :
+  -  url : http://localhost:8888/book_Sarah/admin/administration.php (sous Mac) ou http://localhost:/book_Sarah/admin/administration.php si vous êtes sous Windows
+  -   identifiant : admin
+  - mot de passe : admin
